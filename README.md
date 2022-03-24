@@ -1,15 +1,15 @@
+本着“内容和格式相分离”的理念，加上一些细节上的优化最终完成了《浙江工业大学本科毕业论文LaTeX模板》。《浙江工业大学理学院毕业论文规范2021》规范本身就有或多或少的问题，是否还需要修改要再问。
 
-本着“内容和格式相分离”的理念，加上一些细节上的优化最终完成了《浙江工业大学本科毕业论文LaTeX模板》。[《浙江工业大学理学院毕业论文规范2021》](https://www.haoyufang.site:8892/download/public/%E6%B5%99%E6%B1%9F%E5%B7%A5%E4%B8%9A%E5%A4%A7%E5%AD%A6%E7%90%86%E5%AD%A6%E9%99%A2%E6%AF%95%E4%B8%9A%E8%AE%BA%E6%96%87%E8%A7%84%E8%8C%832021/)规范本身就有或多或少的问题，是否还需要修改要再问。
-
-本模板基于$\LaTeX 2_\varepsilon$，目前为止还是以$\LaTeX 2_\varepsilon$为主流，地位还不可撼动。
+本模板基于LaTeX2e，目前为止还是以LaTeX2e为主流，地位还不可撼动。
 
 模板项目地址：
 
-* Github:
-* Gitee：
-* 博客地址：
+* [Github](https://github.com/AsukaEva2/ZJUTbachelor)
+* [Gitee](https://gitee.com/asukaeva2/zjutbachelor)
 
-欢迎本学院以及$\LaTeX$开发者、爱好者一起使用和维护。
+另参考我的博客[浙江工业大学本科毕业论文LaTeX模板](https://haoyufang.gitee.io/2022/03/24/%E6%B5%99%E6%B1%9F%E5%B7%A5%E4%B8%9A%E5%A4%A7%E5%AD%A6%E6%9C%AC%E7%A7%91%E6%AF%95%E4%B8%9A%E8%AE%BA%E6%96%87LaTeX%E6%A8%A1%E6%9D%BF/)和[正儿八经学习LaTeX](https://haoyufang.gitee.io/2022/03/01/%E6%AD%A3%E5%84%BF%E5%85%AB%E7%BB%8F%E5%AD%A6%E4%B9%A0LaTex/)
+
+欢迎本学院以及LaTeX开发者、爱好者一起使用和维护。
 
 ![16b692877f4312853cb988b45eca021](./README/README-2022-03-24-18-18-06-1.png)
 
