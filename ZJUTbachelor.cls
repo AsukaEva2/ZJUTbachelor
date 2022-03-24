@@ -302,15 +302,19 @@
 	%1.5倍行距
 	\begin{spacing}{1.625} %1.5*1.3/1.2
 		\centering\songti\zihao{-4}\tableofcontents
+		\thispagestyle{fancy}
 	\end{spacing}	
+
 	\addcontentsline{toc}{section}{目录}
 	\pagebreak	
 	\begin{spacing}{1.625}
 		\centering\songti\zihao{-4}\listoftables
+		\thispagestyle{fancy}
 	\end{spacing}
 	\addcontentsline{toc}{section}{表列}	
 	\begin{spacing}{1.625}
 		\centering\songti\zihao{-4}\listoffigures
+		\thispagestyle{fancy}
 	\end{spacing}	
 	\addcontentsline{toc}{section}{图列}
 	\pagebreak	

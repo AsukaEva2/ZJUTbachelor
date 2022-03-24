@@ -62,4 +62,4 @@ graph LR
 
 # 模板实例
 
-![长图](./README/长图.jpg)
+![长图](./README/长图.png)
