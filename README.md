@@ -2,6 +2,8 @@
 
 本模板基于LaTeX2e，目前为止还是以LaTeX2e为主流，地位还不可撼动。
 
+使用本模板之前，请仔细阅读此文档以及main.pdf的第二章。可用xeLaTeX（我这里环境是Win10下的TexLive+TeXstudio）编译main.tex查看是否有正常编译。
+
 模板项目地址：
 
 * [Github](https://github.com/AsukaEva2/ZJUTbachelor)
@@ -60,30 +62,4 @@ graph LR
 
 # 模板实例
 
-![1](./README/README-2022-03-24-18-18-06-4.jpg)
-
-![2](./README/README-2022-03-24-18-18-06-5.jpg)
-
-![4](./README/README-2022-03-24-18-18-06-6.jpg)
-
-![5](./README/README-2022-03-24-18-18-06-7.jpg)
-
-![6](./README/README-2022-03-24-18-18-06-8.jpg)
-
-![7](./README/README-2022-03-24-18-18-06-9.jpg)
-
-![8](./README/README-2022-03-24-18-18-06-10.jpg)
-
-![9](./README/README-2022-03-24-18-18-06-11.jpg)
-
-![10](./README/README-2022-03-24-18-18-07-12.jpg)
-
-![11](./README/README-2022-03-24-18-18-07-13.jpg)
-
-![12](./README/README-2022-03-24-18-18-07-14.jpg)
-
-![13](./README/README-2022-03-24-18-18-07-15.jpg)
-
-![14](./README/README-2022-03-24-18-18-07-16.jpg)
-
-![15](./README/README-2022-03-24-18-18-07-17.jpg)
+![长图](./README/长图.jpg)

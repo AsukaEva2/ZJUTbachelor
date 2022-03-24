@@ -25,7 +25,7 @@ $\LaTeXe$编译引擎用xeLaTeX，基于“内容和格式相分离”的理念�
 \end{lstlisting}
 
 
-\subsection{诚信承诺书}
+\subsection{诚信承诺书和任务书}
 
 将你的诚信承诺书转成pdf文件后放入pdf文件夹
 
@@ -46,7 +46,7 @@ $\LaTeXe$编译引擎用xeLaTeX，基于“内容和格式相分离”的理念�
 	\Endepartment{College of Science}
 \end{lstlisting}
 
-在\verb|\ZhAbstract{中文摘要内容}{关键词1\hspace{1em}关键词2|中第一个花括号中写入中文摘要，在第二个花括号中填入关键词
+在\verb|\ZhAbstract{中文摘要内容}{关键词1\hspace{1em}关键词2}|中第一个花括号中写入中文摘要，在第二个花括号中填入关键词
 
 在\verb|\EnAbstract{Contents of English Abstract}{Keywords1;Keywords2;}|中第一个花括号中写入英文摘要，在第二个花括号中填入英文关键词
 
@@ -69,13 +69,13 @@ $\LaTeXe$编译引擎用xeLaTeX，基于“内容和格式相分离”的理念�
 将源文件分割成若干个文件，例如将每章内容单独写在一个文件中，会大大简化修改和校对的工作。建议把每个章节放在parts文件夹中，用\verb|\input{parts/xxxx}|来导入，不需要加.tex后缀。
 
 \begin{lstlisting}
-	\include{parts/第一章}
-	\include{parts/第二章}
+	\input{parts/第一章}
+	\input{parts/第二章}
 \end{lstlisting}
 
 \subsection{参考文献}
 
-\verb|\bibliography{bib文件}|更改为你的bib文件，用\verb|\caite{xxx}|在文中引用。浙江工业大学参照《文后参考文献著录规则》（GBT 7714-2005）执行，gbt7714.sty和gbt7714-2005-unsrt.bst文件已在cls文件中定义了格式。以下代码只需改成你的ref.bib文档，不需要后缀
+\verb|\bibliography{bib文件}|更改为你的bib文件，用\verb|\cite{xxx}|在文中引用。浙江工业大学参照《文后参考文献著录规则》（GBT 7714-2005）执行，gbt7714.sty和gbt7714-2005-unsrt.bst文件已在cls文件中定义了格式。以下代码只需改成你的ref.bib文档，不需要后缀
 
 \begin{lstlisting}
 	\newpage
