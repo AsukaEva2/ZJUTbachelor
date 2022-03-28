@@ -85,7 +85,6 @@
 \RequirePackage{multirow} %纵向合并表格单元格，不支持换行
 \RequirePackage{makecell} %也能纵向合并表单单元格，支持换行
 \RequirePackage{listings} %插入代码块
-\RequirePackage{setspace} %调整行间距，用在目录行间距调整
 
 \RequirePackage{caption} %标题
 \DeclareCaptionFont{songxiaosi}{\songti\zihao{-4}} %表、图的标题用宋体小四，需要声明
@@ -125,7 +124,16 @@
 \renewcommand{\cftfigpresnum}{图} %图列前面加上“图”字
 \counterwithin{table}{section} %table计数器以section计数器为上级计数器
 \counterwithin{figure}{section} %%figure计数器以section计数器为上级计数器
-\renewcommand{\cftsecpagefont}{\songti} %页码宋体，另外：直接在\tableofcontents之前定义内容为宋体字体
+\renewcommand{\cftsecpagefont}{\songti\zihao{5}} %以下，定义页码字体宋体小四
+\renewcommand{\cftsubsecpagefont}{\songti\zihao{-4}}
+\renewcommand{\cftsubsubsecpagefont}{\songti\zihao{-4}}
+\renewcommand{\cftfigpagefont}{\songti\zihao{-4}}
+\renewcommand{\cfttabpagefont}{\songti\zihao{-4}}
+\renewcommand{\cftsecfont}{\songti\zihao{-4}} %以下，定义标题字体宋体小四
+\renewcommand{\cftsubsecfont}{\songti\zihao{-4}}
+\renewcommand{\cftsubsubsecfont}{\songti\zihao{-4}}
+\renewcommand{\cftfigfont}{\songti\zihao{-4}}
+\renewcommand{\cfttabfont}{\songti\zihao{-4}}
 \renewcommand{\cftsubsecleader}{\cftsecleader} %以下，定义所有leader都和section一样
 \renewcommand{\cftsubsubsecleader}{\cftsecleader}
 \renewcommand{\cftsubsubsecleader}{\cftsecleader}
@@ -300,24 +308,23 @@
 %目录、表列、图列
 \providecommand{\makeTOCandLOTandLOF}{	
 	%1.5倍行距
-	\begin{spacing}{1.625} %1.5*1.3/1.2
-		\centering\songti\zihao{-4}\tableofcontents
+	{ 
+		\linespread{1.625}\selectfont	%行间距1.5*1.3/1.2，\selectfont选中字体
+		%需要选定字体字号，行间距才能生效，否则默认5号宋体的1.5倍(word版)行间距
+		%而真正显示的字体在tocloft中定义
+		\centering\songti\zihao{-4} 
+		\tableofcontents
+		\thispagestyle{fancy}	
+		\addcontentsline{toc}{section}{目录}
+		\pagebreak	
+		\centering\listoftables
 		\thispagestyle{fancy}
-	\end{spacing}	
-
-	\addcontentsline{toc}{section}{目录}
-	\pagebreak	
-	\begin{spacing}{1.625}
-		\centering\songti\zihao{-4}\listoftables
-		\thispagestyle{fancy}
-	\end{spacing}
-	\addcontentsline{toc}{section}{表列}	
-	\begin{spacing}{1.625}
-		\centering\songti\zihao{-4}\listoffigures
-		\thispagestyle{fancy}
-	\end{spacing}	
-	\addcontentsline{toc}{section}{图列}
-	\pagebreak	
+		\addcontentsline{toc}{section}{表列}	
+		\centering\listoffigures
+		\thispagestyle{fancy}	
+		\addcontentsline{toc}{section}{图列}
+		\pagebreak	
+	}
 	
 }
 
