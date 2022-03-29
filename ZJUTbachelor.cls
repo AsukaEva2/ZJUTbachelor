@@ -109,6 +109,9 @@
 \fancyhead[C]{\centering\songti\zihao{-5}浙江工业大学毕业设计（论文）} %页眉加“浙江工业大学毕业设计（论文）”，字体为宋体小五号，居中
 \fancyfoot[C]{\centering\songti\zihao{-5}\thepage} %页码用宋体小五号字页面底端居中。
 
+\RequirePackage{pifont} %脚注圆圈内数字
+\renewcommand\thefootnote{\ding{\numexpr171+\value{footnote}}}
+
 \RequirePackage{tocloft} %目录设置
 \setlength{\cftbeforetoctitleskip}{0ex}\setlength{\cftaftertoctitleskip}{0ex} %“目录”这个标题的前后垂直距离
 \setlength{\cftbeforesecskip}{0ex}\setlength{\cftbeforesubsecskip}{0ex}\setlength{\cftbeforesubsubsecskip}{0ex} %section,subsection,subsubsection垂直距离
