@@ -93,6 +93,10 @@
 	justification=centering %多行标题居中
 }
 
+\newcommand*{\tabref}[1]{\tablename~\ref{#1}~}
+\newcommand*{\figref}[1]{\figurename~\ref{#1}~}
+\newcommand*{\neweqref}[1]{公式~\eqref{#1}~}
+
 \RequirePackage{hyperref} %超链接
 \hypersetup{hidelinks} %不显示颜色框
 

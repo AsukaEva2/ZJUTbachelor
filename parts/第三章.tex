@@ -2,7 +2,9 @@
 
 \subsection{图片}
 
-如图\ref{F1}所示
+使用\verb*|\ref{}|命令，如图\ref{F1}所示。
+
+新定义命令\verb*|\figref{}|，不用手动添加“图”字，增加了间距。效果：如\figref{F1}所示：
 
 \begin{figure}[H]
 	\centering
@@ -12,9 +14,11 @@
 
 \subsection{表格}
 
-如表\ref{T1}所示：
+使用\verb*|\ref{}|命令，如表\ref{T1}所示。
 
-\begin{table}[!htbp]
+新定义命令\verb*|\tabref{}|，不用手动添加“表”字，增加了间距。效果：如\tabref{T1}所示：
+
+\begin{table}[H]
 	\centering
 	\zihao{6}
 	\caption{命名法}
@@ -50,7 +54,9 @@
 
 \subsection{公式}
 
-如式\eqref{E1}所示
+\verb*|\eqref{}|命令，如公式\eqref{E1}所示。
+
+新定义命令\verb*|\neweqref{}|，不用手动添加“公式”字，增加了间距。效果：如\neweqref{E1}所示。
 
 \begin{gather}
 	\dot{Q}_{T}=\dot{n}_{3} T_{\mathrm{mc}}\left[S_{3}\left(T_{\mathrm{mc}}, x_{\mathrm{s}}\right)-S_{3}\left(T_{\mathrm{mc}}\right)\right]=\dot{n}_{3} \frac{\pi^{2}}{2} R T_{\mathrm{mc}}\left(\frac{1}{T_{\mathrm{F}}\left(x_{\mathrm{s}}\right)}-\frac{1}{T_{\mathrm{F}}(1)}\right) \label{2E1} \\
