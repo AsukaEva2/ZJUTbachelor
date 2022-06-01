@@ -6,7 +6,7 @@
 %3.设置页眉页脚
 %4.设置目录样式
 %5.声明思源黑体字体族（此字体需要安装，免费商用），这是由于\heiti只有一种字重且不想使用伪加粗
-%6.一设置级、二级、三级、四级标题的格式、图表标题样式
+%6.设置一级、二级、三级、四级标题的格式、图表标题样式、脚注样式
 %7.设置中英文摘要的样式
 %8.设置封面样式
 %9.设置参考文献格式，采用GBT7714 2005版
@@ -85,6 +85,11 @@
 \RequirePackage{multirow} %纵向合并表格单元格，不支持换行
 \RequirePackage{makecell} %也能纵向合并表单单元格，支持换行
 \RequirePackage{listings} %插入代码块
+\RequirePackage{extarrows} %为了用长等号
+
+\RequirePackage{mhchem} %无机化学公式
+\RequirePackage{chemfig}
+\newcommand*{\newchemfig}[1]{~\chemfig{#1}~}
 
 \RequirePackage{caption} %标题
 \DeclareCaptionFont{songxiaosi}{\songti\zihao{-4}} %表、图的标题用宋体小四，需要声明
@@ -93,6 +98,7 @@
 	justification=centering %多行标题居中
 }
 
+%ref,eqref命令没有间距太丑了
 \newcommand*{\tabref}[1]{\tablename~\ref{#1}~}
 \newcommand*{\figref}[1]{\figurename~\ref{#1}~}
 \newcommand*{\neweqref}[1]{公式~\eqref{#1}~}
@@ -113,8 +119,12 @@
 \fancyhead[C]{\centering\songti\zihao{-5}浙江工业大学毕业设计（论文）} %页眉加“浙江工业大学毕业设计（论文）”，字体为宋体小五号，居中
 \fancyfoot[C]{\centering\songti\zihao{-5}\thepage} %页码用宋体小五号字页面底端居中。
 
+\RequirePackage[bottom]{footmisc} %脚注紧贴页脚
 \RequirePackage{pifont} %脚注圆圈内数字
 \renewcommand\thefootnote{\ding{\numexpr171+\value{footnote}}}
+
+\captionsetup{labelsep=quad} %取消图表冒号
+
 
 \RequirePackage{tocloft} %目录设置
 \setlength{\cftbeforetoctitleskip}{0ex}\setlength{\cftaftertoctitleskip}{0ex} %“目录”这个标题的前后垂直距离
@@ -131,6 +141,7 @@
 \renewcommand{\cftfigpresnum}{图} %图列前面加上“图”字
 \counterwithin{table}{section} %table计数器以section计数器为上级计数器
 \counterwithin{figure}{section} %%figure计数器以section计数器为上级计数器
+\counterwithin{equation}{section} %%equation计数器以section计数器为上级计数器
 \renewcommand{\cftsecpagefont}{\songti\zihao{5}} %以下，定义页码字体宋体小四
 \renewcommand{\cftsubsecpagefont}{\songti\zihao{-4}}
 \renewcommand{\cftsubsubsecpagefont}{\songti\zihao{-4}}
@@ -157,8 +168,8 @@
 \ctexset{
 	bibname = {\siyuanheitiBold\zihao{2}参考文献},
 	contentsname = {\siyuanheitiBold\zihao{2}目\hspace{1em}录},
-	listfigurename = {},
-	listtablename = {},
+	listfigurename = {\siyuanheitiBold\zihao{2}图\hspace{1em}列},
+	listtablename = {\siyuanheitiBold\zihao{2}表\hspace{1em}列},
 	figurename = {图},
 	tablename = {表},
 	section/name = {第,章},
@@ -240,7 +251,7 @@
 		\vspace{1ex}
 		\begin{table}[H]
 			\centering
-			\zihao{3}\heiti		
+			\zihao{3}\heiti
 %			\resizebox{\linewidth}{!}{
 			\begin{tabular}[b]{p{4em}p{4em}p{10em}<{\centering}c}				
 			\parbox[b]{5em}{设计(论文)题\hspace{2em}目}& \multicolumn{3}{c}{\makebox[17em][c]{\centering\enspace\enspace\parbox[b]{15em}{\centering\@thesis}\enspace\enspace}} \\ \cline{2-4} \\[2ex]
@@ -260,8 +271,7 @@
 
 
 %中文摘要
-\providecommand{\ZhAbstract}[2]{
-	
+\providecommand{\ZhAbstract}[2]{	
 	\begin{table}[H]
 		\centering
 		%黑体，二号，居中
@@ -274,12 +284,11 @@
 	\begin{abstract}
 		%楷体，小四，行距1.25倍
 		\zihao{-4}\kaishu					
-		\noindent #1 \\[2ex]
+		\noindent\hspace{2em}#1 \\[2ex]
 		\siyuanheitiBold\bfseries 关键词：\songti\mdseries #2				
 	\end{abstract}
 	\addcontentsline{toc}{section}{中文摘要}	
 	\pagebreak
-
 }
 
 
@@ -290,7 +299,6 @@
 
 %英文摘要
 \providecommand{\EnAbstract}[2]{
-	
 	\begin{table}[H]
 		\centering
 		%Times New Roman ，三号，居中
@@ -305,11 +313,8 @@
 		\noindent #1\\[2ex]		
 		Keywords：#2			
 	\end{abstract}
-
-
 	\addcontentsline{toc}{section}{英文摘要}	
 	\pagebreak
-
 }
 
 %目录、表列、图列
@@ -327,6 +332,7 @@
 		\centering\listoftables
 		\thispagestyle{fancy}
 		\addcontentsline{toc}{section}{表列}	
+		\pagebreak	
 		\centering\listoffigures
 		\thispagestyle{fancy}	
 		\addcontentsline{toc}{section}{图列}
@@ -344,6 +350,7 @@
 	\songti\zihao{5} #1
 }
 
+%附录
 \providecommand{\makeAppendix}[1]{	
 	\newpage
 	\appendix		

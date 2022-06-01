@@ -17,6 +17,22 @@
 
 <!--more-->
 
+# 更新日志
+
+```git
+52de835e8be5042e85d8ad57c61389e2f8ce823c (HEAD -> master, origin/master, origin/HEAD) 2022年05月31日 16:58:23：添加更新日志
+68fc76581f4ce884da7f38bf9f088bfbd2b7c2d7 2022年05月31日 16:52:15：表列和图列添加回一级标题显示；更改表列和图列分页显示；图表的标题用空格代替冒号显示；参考文献以后的页码改为小写罗马数字
+12608be85c347616364998d16fe97caadaecb7cd 2022年04月 3日  3:31:55：新增图表公式引用的三个命令
+270b7f69c434740002dafa0160d78974b37ee7fa 2022年03月29日 18:09:35：脚注符号更改为圆圈内数字，main.pdf添加说明
+6d8ea1ef8ab7695a1bf6b21e8ad41d2caa19ef01 2022年03月28日 18:27:34：修复由于texlive2021及以后版本支持宋体加粗导致的目录一级标题加粗问题
+33f082e4df128293c1bdf028e80704681f619de7 Merge branch 'master' of https://gitee.com/asukaeva2/zjutbachelor
+56d998248eca579b8f501350d9c27bf99da3ea66 2022年03月25日  0:39:21：修复目录页没有页眉，修改README
+ab6b833229aa4a54fc0706ba427dcd302399bf89 add LICENSE.
+a0c2a7df204fbf0aa3b1fc232b2dd93bd626fe66 2022年03月24日 21:41:02：README修改
+20fab14ec3ec535ae0ee2604a3ee824c69f88af0 2022年03月24日 19:36:24：README修改
+afa935e3f89090f113c576ec3be3c3e684b2a852 2022年03月24日 19:00:04：模板上传
+```
+
 # 模板框架
 
 ```mermaid
