@@ -126,7 +126,7 @@
 \captionsetup{labelsep=quad} %取消图表冒号
 
 
-\RequirePackage{tocloft} %目录设置
+\RequirePackage[titles]{tocloft} %目录设置
 \setlength{\cftbeforetoctitleskip}{0ex}\setlength{\cftaftertoctitleskip}{0ex} %“目录”这个标题的前后垂直距离
 \setlength{\cftbeforesecskip}{0ex}\setlength{\cftbeforesubsecskip}{0ex}\setlength{\cftbeforesubsubsecskip}{0ex} %section,subsection,subsubsection垂直距离
 \cftsetpnumwidth{1em}  %\@pnumwidth，页码离最后一个点的距离
@@ -321,6 +321,7 @@
 \providecommand{\makeTOCandLOTandLOF}{	
 	%1.5倍行距
 	{ 
+		\pagestyle{fancy}
 		\linespread{1.625}\selectfont	%行间距1.5*1.3/1.2，\selectfont选中字体
 		%需要选定字体字号，行间距才能生效，否则默认5号宋体的1.5倍(word版)行间距
 		%而真正显示的字体在tocloft中定义
