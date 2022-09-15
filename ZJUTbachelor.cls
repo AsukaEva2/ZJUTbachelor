@@ -187,9 +187,9 @@
 \newif\ifAbstractEN
 \providecommand\AbstractEN{
 	\ifAbstractEN
-		\ctexset{abstractname={\mdseries\zihao{-3}\fontfamily{Times New Roman}Abstract}}
+	\ctexset{abstractname={\mdseries\zihao{-3}\fontfamily{Times New Roman}Abstract}}
 	\else
-		\ctexset{abstractname={\siyuanheitiBold\zihao{-3}摘\hspace{2.5em}要}}
+	\ctexset{abstractname={\siyuanheitiBold\zihao{-3}摘\hspace{2.5em}要}}
 	\fi
 } 
 
@@ -252,19 +252,19 @@
 		\begin{table}[H]
 			\centering
 			\zihao{3}\heiti
-%			\resizebox{\linewidth}{!}{
-			\begin{tabular}[b]{p{4em}p{4em}p{10em}<{\centering}c}				
-			\parbox[b]{5em}{设计(论文)题\hspace{2em}目}& \multicolumn{3}{c}{\makebox[17em][c]{\centering\enspace\enspace\parbox[b]{15em}{\centering\@thesis}\enspace\enspace}} \\ \cline{2-4} \\[2ex]
-			指导教师&\multicolumn{3}{c}{\@mysupervisor}  \\ \cline{2-4} \\[2ex]
-			学\hspace{2em}生&\multicolumn{3}{c}{\centering\@myname} \\ \cline{2-4} \\[2ex]
-			学\hspace{2em}号&\multicolumn{3}{c}{\centering\@studentid} \\ \cline{2-4} \\[2ex]
-			& 院\hspace{2em}系 & \@department & \\ \cline{3-3} \\[2ex]
-			& 专\hspace{2em}业 & \@major & \\ \cline{3-3} \\[2ex]
-			& 班\hspace{2em}级 & \@class & \\ \cline{3-3} 
-			\end{tabular}
-%		}
+			%			\resizebox{\linewidth}{!}{
+				\begin{tabular}[b]{p{4em}p{4em}p{10em}<{\centering}c}				
+					\parbox[b]{5em}{设计(论文)题\hspace{2em}目}& \multicolumn{3}{c}{\makebox[17em][c]{\centering\enspace\enspace\parbox[b]{15em}{\centering\@thesis}\enspace\enspace}} \\ \cline{2-4} \\[2ex]
+					指导教师&\multicolumn{3}{c}{\@mysupervisor}  \\ \cline{2-4} \\[2ex]
+					学\hspace{2em}生&\multicolumn{3}{c}{\centering\@myname} \\ \cline{2-4} \\[2ex]
+					学\hspace{2em}号&\multicolumn{3}{c}{\centering\@studentid} \\ \cline{2-4} \\[2ex]
+					& 院\hspace{2em}系 & \@department & \\ \cline{3-3} \\[2ex]
+					& 专\hspace{2em}业 & \@major & \\ \cline{3-3} \\[2ex]
+					& 班\hspace{2em}级 & \@class & \\ \cline{3-3} 
+				\end{tabular}
+				%		}
 		\end{table}
-%		\vfill
+		%		\vfill
 		\newpage
 	}
 }
@@ -277,7 +277,7 @@
 		%黑体，二号，居中
 		\heiti\zihao{2}\parbox{0.85\linewidth}{\centering \@thesis} \\[4ex]
 		%宋体，小四
-		\songti\zihao{-4}\makebox[\linewidth][c]{学生姓名：\@myname\hspace{5em}指导教师：\@mysupervisor~教授} \\[3ex]
+		\songti\zihao{-4}\makebox[\linewidth][c]{学生姓名：\@myname\hspace{5em}指导教师：\@mysupervisor~副教授} \\[3ex]
 		\songti\zihao{-4}\makebox[\linewidth][c]{浙江工业大学\@department} \\[4ex]
 	\end{table}
 	\AbstractENfalse\AbstractEN
@@ -321,22 +321,24 @@
 \providecommand{\makeTOCandLOTandLOF}{	
 	%1.5倍行距
 	{ 
+		\pagebreak
 		\pagestyle{fancy}
 		\linespread{1.625}\selectfont	%行间距1.5*1.3/1.2，\selectfont选中字体
 		%需要选定字体字号，行间距才能生效，否则默认5号宋体的1.5倍(word版)行间距
 		%而真正显示的字体在tocloft中定义
 		\centering\songti\zihao{-4} 
-		\tableofcontents
-		\thispagestyle{fancy}	
 		\addcontentsline{toc}{section}{目录}
+		\tableofcontents
+		
 		\pagebreak	
+		\addcontentsline{toc}{section}{表列}
 		\centering\listoftables
-		\thispagestyle{fancy}
-		\addcontentsline{toc}{section}{表列}	
+		
+		
 		\pagebreak	
-		\centering\listoffigures
-		\thispagestyle{fancy}	
 		\addcontentsline{toc}{section}{图列}
+		\centering\listoffigures
+		
 		\pagebreak	
 	}
 	
@@ -357,8 +359,4 @@
 	\appendix		
 	\songti\zihao{5} #1
 }
-
-
-
-
 
